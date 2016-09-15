@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+html,
+body {
+  height: 100%;
+  overflow: auto;
+}
+body {
+  font-family: "Open Sans", Callibri, sans-serif;
+  padding: 10px;
+}
+body::after {
+  position: fixed;
+  content: '';
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: 7px solid #000;
+  pointer-events: none;
+}
+h1 {
+  font-weight: 600;
+}
+
+body {
+  background: no-repeat 70% 40% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+}
+  .logo img {
+    height: 500px;
+  }
+
+.place-and-date {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  color: #fd532e;
+  font-size: 1.5em;
+}
+
+.nav {
+  position: fixed;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 60px 4px 20px;
+  line-height: 30px;
+  width: 270px;
+  white-space: nowrap;
+  z-index: 1;
+
+  list-style: none;
+  background: rgba(0, 0, 0, .8);
+  font-weight: 600;
+  color: #fff;
+}
+  .nav::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: '';
+    width: 40px;
+    height: 100%;
+    background: #000;
+  }
+  .nav a {
+    border-bottom: 1px solid #fff;
+    text-transform: lowercase;
+  }
+  .nav .current {
+    color: #fd532e;
+    border: none;
+    font-weight: 800;
+  }
+  .nav .current::after {
+    position: absolute;
+    right: 0;
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: #fd532e;
+    margin-top: -6px;
+  }
+
+@media screen and (max-width: 850px) {
+  .content {
+    width: 33%;
+  }
+  .nav {
+    font-size: .92em;
+    width: 210px;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  left: 36%;
+  width: 35%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 5em;
+}
+  .content p {
+    margin-bottom: .5em;
+  }
+
+.join-form {
+  margin-top: 1em;
+}
+  .join-form input,
+  .join-form textarea {
+    border: none;
+    padding: 5px;
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  .join-form input[type="submit"] {
+    height: 1px;
+  }

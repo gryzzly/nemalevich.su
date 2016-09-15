@@ -1,0 +1,58 @@
+<!doctype html>
+<head>
+  <title>Nemalevich{{#if title}} | {{title}}{{/if}}</title>
+  <meta charset="utf-8">
+  <link href="assets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&subset=cyrillic" rel="stylesheet">
+</head>
+<body style="background-image: url(assets/imgs/{{image}})">
+  <a href="/" class="logo">
+    <h1>
+      <img src="assets/imgs/logo.png" title="Nemalevich Food Art Market">
+    </h1>
+  </a>
+  <nav class="nav">
+    {{#each pages}}
+    <li>
+      <a
+        href="{{this.path.href}}"
+      >{{this.title}}</a>
+    </li>
+    {{/each}}
+  </nav>
+  <div class="place-and-date">
+    <h1>ТЦ МЕТРОПОЛИС</h1>
+    <p>19/09 - 08/10</p>
+  </div>
+  <main class="content">
+    {{{contents}}}
+  </main>
+  <script>
+    (function () {
+      var anchorAPI = document.createElement('a');
+      var currentPath = location.pathname;
+      var navLinks = [].slice.call(document.querySelectorAll('.nav a'));
+      navLinks.forEach(function (link) {
+        anchorAPI.href = link.href;
+        if (currentPath === anchorAPI.pathname) {
+          link.classList.add('current');
+        } else {
+          link.classList.remove('current');
+        }
+      });
+      var bgs = [
+        'fish',
+        'broccoli',
+        'meat',
+        'onion'
+      ]
+      if (currentPath === '/') {
+        document.body.style.backgroundImage =
+          'url(assets/imgs/bg-' +
+          bgs[Math.floor(Math.random() * bgs.length)] +
+          '.jpg)';
+      }
+
+    }());
+  </script>
+</body>
