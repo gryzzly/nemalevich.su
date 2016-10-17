@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node util/run",
-    "deploy": "surge build",
+    "deploy": "surge build nemalevich.su",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

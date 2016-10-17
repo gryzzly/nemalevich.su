@@ -12,6 +12,7 @@ order: 5
   <input type="email" name="_replyto" placeholder="Эл адрес" />
   <input type="phone" name="phone" placeholder="Телефон" />
   <textarea name="description" placeholder="Описание проекта"></textarea>
+  <input type="hidden" name="_next" value="http://nemalevich.su" />
   <button type="submit">Отправить</button>
 </form>
 
